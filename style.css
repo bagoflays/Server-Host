@@ -1,0 +1,35 @@
+.center {
+    font-family: Ubuntu, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+body {
+    background-color: #1e1e1e;
+    font-family: Ubuntu, Helvetica, sans-serif;
+    color: white;
+}
+
+.topleft {
+    font-family: Ubuntu, Helvetica, sans-serif;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    color: white;
+}
+
+textarea {
+    background-color: #313131;
+    resize: none;
+    color: white;
+}
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+input {
+    background-color: #313131;
+    color: white;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "server-host",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "npx electron-packager . ServerHost --platform=win32 --arch=x64 --out=bin --icon=Icon.ico",
+    "packR": "npx electron-packager . ServerHost --platform=win32 --arch=x64 --out=bin --icon=Icon.ico --overwrite",
+    "linux_pack": "npx electron-packager . ServerHost --platform=linux --arch=x64 --out=bin_linux --icon=Icon.ico",
+    "linux_packR": "npx electron-packager . ServerHost --platform=linux --arch=x64 --out=bin --icon=Icon.ico --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "open": "^10.1.0"
+  }
+}

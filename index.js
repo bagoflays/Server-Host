@@ -1,0 +1,10 @@
+const { app, BrowserWindow } = require("electron")
+const path = require("path")
+app.whenReady().then(()=>{
+    let window = new BrowserWindow({width: 720, height: 500, webPreferences:{nodeIntegration: true, contextIsolation: false}})
+    window.setMenu(null)
+    window.setTitle("Server Host")
+    window.loadFile("index.html")
+    window.setResizable(false)
+    window.setIcon("Icon.png")
+})

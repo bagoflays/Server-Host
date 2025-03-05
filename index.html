@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <img src="Uncheck.png" style="width: 40px;height: 40px;" id="checkmark" class="topleft">Automatically open server when finished</h4>
+        <h1 class="center">Server Host</h1>
+        <h4 class="center">by bagoflays</h4>
+        <h4 class="center" id="github">Click me to go to GitHub page.</h4>
+        <div class="center">
+            <textarea id="htmlCode" rows="14" cols="75"></textarea>
+            <input type="number" min="1024" max="9999" id="code">
+            <button id="ServerCreator">Create Server</button>
+        </div>
+    </body>
+    <script>
+        let openRun = false
+        document.getElementById("checkmark").addEventListener("click",()=>{
+            if (openRun) {
+                document.getElementById("checkmark").src = "Uncheck.png"
+                openRun = false
+            } else {
+                document.getElementById("checkmark").src = "Check.png"
+                openRun = true
+            }
+        })
+        document.getElementById("ServerCreator").addEventListener("click", ()=>{
+            createServer(document.getElementById("htmlCode").value,document.getElementById("code").value)
+            if (openRun) {
+                openServer(document.getElementById("code").value)
+            }
+        })
+        document.getElementById("github").addEventListener("click",()=>{
+            openMyLink()
+        })
+    </script>
+</html>
