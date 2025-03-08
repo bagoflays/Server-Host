@@ -1,20 +1,31 @@
 {
   "name": "server-host",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "pack": "npx electron-packager . ServerHost --platform=win32 --arch=x64 --out=bin --icon=Icon.ico",
     "packR": "npx electron-packager . ServerHost --platform=win32 --arch=x64 --out=bin --icon=Icon.ico --overwrite",
-    "linux_pack": "npx electron-packager . ServerHost --platform=linux --arch=x64 --out=bin_linux --icon=Icon.ico",
-    "linux_packR": "npx electron-packager . ServerHost --platform=linux --arch=x64 --out=bin --icon=Icon.ico --overwrite"
+    "linux_pack": "electron-builder"
+  },
+  "build": {
+    "appId": "com.bagoflays.ServerHost",
+    "productName": "Server Host",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "icon": "Icon.png"
+    }
   },
   "keywords": [],
-  "author": "",
+  "author": "bagoflays <smvreactionschannel@gmail.com>",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
+  "description": "An app made for hosting HTML as a web server.",
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8",
     "open": "^10.1.0"
   }
 }
